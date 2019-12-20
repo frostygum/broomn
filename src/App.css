@@ -1,38 +1,48 @@
-.App {
-  text-align: center;
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap');
+
+body * {
+  font-family: 'Quicksand', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.rounded-xl {
+  border-radius: 1.2em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.h-500 {
+  height: 500px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.bg-theme-dark {
+  background-color: #464159;
+  color: #8bbabb;
 }
 
-.App-link {
-  color: #61dafb;
+.bg-theme-dark2 {
+  background-color: #6c7b95;
+  color: #c7f0db;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bg-theme-primary {
+  background-color: #8bbabb;
+  color: #464159;
+}
+
+.bg-theme-primary2 { 
+  background-color: #c7f0db;
+  color: #6c7b95;
+}
+
+.bg-theme-btn { 
+  background-color: #c7f0db;
+  color: #6c7b95;
+  border: 0;
+  font-weight: 600;
+}
+
+.bg-theme-btn:hover { 
+  background-color: #8bbabb;
+  color: #464159;
+  border: 0;
+  font-weight: 600;
 }

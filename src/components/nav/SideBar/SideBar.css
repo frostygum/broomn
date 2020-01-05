@@ -1,0 +1,96 @@
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: var(--gray-dark);
+    color: var(--light);
+    transition: all 0.3s;
+    margin-right: 0.7em;
+}
+
+#sidebar .sidebar-header {
+    background: var(--primary);
+    color: var(--light);
+    padding: 1.2em;
+    margin: 0.7em -0.7em 1.3em 0.7em;
+    border-radius: 0.3em;
+    box-shadow: 0 0.5rem 1rem var(--dark);
+}
+
+#sidebar .sidebar-header strong {
+    display: none;
+    font-size: 1.8em;
+    position: relative;
+    animation: 1s flyingBroom;
+    animation-iteration-count: infinite;
+}
+
+@keyframes flyingBroom {
+    0%    { top: -3px; }
+    50%   { top: 3px; }
+    100%  { top: -3px; }
+}
+
+#sidebar.active {
+    min-width: 80px;
+    max-width: 80px;
+    text-align: center;
+}
+
+#sidebar.active .sidebar-header h3 {
+    display: none;
+}
+
+#sidebar.active .sidebar-header strong {
+    display: block;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    /* 
+        NORMAL STATE
+    */
+
+    #sidebar {
+        min-width: 80px;
+        max-width: 80px;
+        text-align: center;
+        margin-left: -80px !important;
+        margin-right: 0;
+        transition: all 0.3s;
+    }
+
+    #sidebar .sidebar-header {
+        margin: 0.7em 0;
+        transition: all 0.3s;
+    }
+    
+    /* this is sidebar header text */
+    #sidebar .sidebar-header h3{
+        display: none;
+    }
+
+    /* this is sidebar header logo */
+    #sidebar .sidebar-header strong {
+        display: block;
+    }
+
+    /* 
+        ACTIVE STATE
+    */
+
+    #sidebar.active {
+        margin-left: 0 !important;
+        margin-right: 0.7em
+    }
+
+    #sidebar.active .sidebar-header {
+        margin: 0.7em -0.7em 0.7em 0.7em;
+    }
+}

@@ -12,37 +12,3 @@ body * {
 .h-500 {
   height: 500px;
 }
-
-.bg-theme-dark {
-  background-color: #464159;
-  color: #8bbabb;
-}
-
-.bg-theme-dark2 {
-  background-color: #6c7b95;
-  color: #c7f0db;
-}
-
-.bg-theme-primary {
-  background-color: #8bbabb;
-  color: #464159;
-}
-
-.bg-theme-primary2 { 
-  background-color: #c7f0db;
-  color: #6c7b95;
-}
-
-.bg-theme-btn { 
-  background-color: #c7f0db;
-  color: #6c7b95;
-  border: 0;
-  font-weight: 600;
-}
-
-.bg-theme-btn:hover { 
-  background-color: #8bbabb;
-  color: #464159;
-  border: 0;
-  font-weight: 600;
-}

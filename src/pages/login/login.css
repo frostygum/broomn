@@ -1,0 +1,24 @@
+.card .card-body .row svg#icon {
+    color: var(--primary);
+    position: relative;
+    margin-bottom: 0.3em;
+    animation: 1s flyingBroom;
+    animation-iteration-count: infinite;
+}
+
+.card .card-body .row h4 span {
+    color: var(--primary);
+}
+
+@keyframes flyingBroom {
+    0%    { top: -3px; }
+    50%   { top: 3px; }
+    100%   { top: -3px; }
+}
+
+#buildVer {
+    color: var(--primary);
+    position: absolute;
+    bottom: 10px;
+    z-index: 1;
+}

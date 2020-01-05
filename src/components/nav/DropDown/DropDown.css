@@ -1,0 +1,125 @@
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+/* 
+    NORMAL STATE
+*/
+
+#sidebar ul .dropdown > a {
+    text-align: left;
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+    padding: 0.6em 0.8em;
+    font-size: 1.2em;
+    display: block;
+    margin: 0 0.7em;
+}
+
+#sidebar ul .dropdown > a:hover {
+    color: var(--light);
+    background: var(--gray);
+    border-radius: 0.3em;
+    margin: 0.7em -0.7em 0.7em 0.7em;
+    box-shadow: 0 0.5rem 1rem var(--dark);
+}
+
+#sidebar ul .dropdown > a i {
+    margin-right: 10px;
+}
+
+#sidebar ul .dropdown.active > a, a[aria-expanded="true"] {
+    color: var(--light);
+    background: var(--secondary);
+    margin: 0.7em -0.7em 0 0.7em;
+    border-radius: 0.3em;
+    box-shadow: 0 0.5rem 1rem var(--dark);
+}
+
+.dropdown > a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+/* 
+    SIDEBAR ACTIVE STATE
+*/
+
+#sidebar.active ul .dropdown > a {
+    padding: 1.2em ;
+    text-align: center;
+    font-size: 0.85em;
+}
+
+#sidebar.active ul .dropdown > a span {
+    display: none;
+}
+
+#sidebar.active ul .dropdown > a i {
+    margin-right: 0;
+    display: block;
+    font-size: 1.8em;
+}
+
+#sidebar.active .dropdown-toggle::after {
+    top: auto;
+    bottom: 10px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    /* 
+        NORMAL STATE
+    */
+
+    #sidebar ul .dropdown > a {
+        padding: 20px 10px;
+    }
+
+    #sidebar ul .dropdown > a span {
+        display: none;
+    }
+
+    #sidebar ul .dropdown > a i {
+        margin-right: 0;
+        font-size: 1.3em;
+        display: block;
+    }
+
+    #sidebar ul .dropdown.active > a, a[aria-expanded="true"] {
+        margin: 0.7em ;
+    }
+
+    .dropdown-toggle::after {
+        top: auto;
+        bottom: 10px;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        transform: translateX(50%);
+    }
+
+    /* 
+        SIDEBAR ACTIVE STATE
+    */
+
+    #sidebar.active ul .dropdown.active > a, a[aria-expanded="true"] {
+        margin: 0.7em -0.7em 0   0.7em;
+    }
+}
